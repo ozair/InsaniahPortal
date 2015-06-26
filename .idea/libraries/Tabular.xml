@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Tabular">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/tabula-java-master/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/tabula-java-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
