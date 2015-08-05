@@ -91,7 +91,11 @@ public class Result {
             String courseCode = "";
             String creditHour = "";
             String grade = "";
-            String[] colOfCourse = strCourses[i].split(" ");
+            String[] colOfCourse = strCourses[i].split("[ ]+");//one or more spaces
+
+
+
+
 
 
             courseCode = colOfCourse[0] + " " + colOfCourse[1];//the first two cols is a course code
@@ -102,7 +106,7 @@ public class Result {
             while (true) {                  //getting the course name
 
 
-                if (colOfCourse[j].matches("[A-Z&]+")) {  // if the col is not work you need to check the next col in advance //eg. Arabic Language 2
+                if (colOfCourse[j].matches("[A-Z&-]+")) {  // if the col is not work you need to check the next col in advance //eg. Arabic Language 2
                     courseName += colOfCourse[j];
                 } else {
                     if (colOfCourse[j + 1].matches("\\d")) {

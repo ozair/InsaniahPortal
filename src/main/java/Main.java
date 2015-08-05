@@ -1,6 +1,7 @@
 import com.insaniah.*;
 import com.insaniah.programStructure.ProgramStructure;
 import com.insaniah.result.*;
+import core.Insaniah;
 import core.InsaniahUrlConnection;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -286,7 +287,41 @@ public class Main {
 //
 
 
+//        Insaniah insaniah = new Insaniah("a1210933","olasunkanmi20000");
+//        insaniah.login();
+//
+//
+//        ResultDownloader downloader = new ResultDownloader(insaniah);
+//
+//        downloader.downloadFiles();
 
+//        InsaniahUrlConnection insaniahUrlConnection = new InsaniahUrlConnection("a1111231","m204271");
+//        insaniahUrlConnection.login();
+//
+//
+//        ResultDownloaderForUrlConnection resultDownloaderForUrlConnection = new ResultDownloaderForUrlConnection(insaniahUrlConnection);
+//
+//
+//        System.out.print(resultDownloaderForUrlConnection.getNumOfSem());
+
+
+        ResultParser parser = new ResultParser("result1.pdf");
+
+        Result result = new Result(parser.parseToString(),false);
+
+
+        ResultCourse[] courses = result.getResultCourses();
+
+
+        for(int i=0;i<courses.length;i++){
+            System.out.print(courses[i].getCourseCode()+"");
+            System.out.print(courses[i].getCourseName()+"");
+            System.out.println(courses[i].getGrade());
+            System.out.println();
+        }
+
+
+//        System.out.println(parser.parseToString());
 
 
     }
